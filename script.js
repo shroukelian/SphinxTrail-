@@ -4,20 +4,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (menuToggle && navMenu) {
         menuToggle.addEventListener('click', function(e) {
-            // منع المتصفح من تنفيذ أي أمر آخر
             e.preventDefault();
             
-            // إضافة أو إزالة كلاس active
             navMenu.classList.toggle('active');
             
-            // تغيير شكل الزر
             if (navMenu.classList.contains('active')) {
-                menuToggle.innerHTML = '&times;'; // علامة X
+                menuToggle.innerHTML = '&times;'; 
             } else {
-                menuToggle.innerHTML = '&#9776;'; // علامة القائمة
+                menuToggle.innerHTML = '&#9776;'; 
             }
             
-            console.log("Menu toggled!"); // هذا للتأكد في الكونسول أن الضغطة تعمل
+            console.log("Menu toggled!"); 
         });
     } else {
         console.error("عذراً: لم يتم العثور على زر المنيو أو القائمة في الصفحة");

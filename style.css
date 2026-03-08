@@ -341,7 +341,6 @@ h3 {
     }
 }
 
-/* الألوان الأساسية */
 :root {
     --gold: #c5a059;
     --gold-hover: #a67c00;
@@ -349,7 +348,6 @@ h3 {
     --white: #ffffff;
 }
 
-/* --- الهيدر والقائمة --- */
 .header {
     background: #ffffff;
     padding: 15px 0;
@@ -366,7 +364,6 @@ h3 {
     align-items: center;
 }
 
-/* إخفاء زر الثلاث شرطات في الديسكتوب */
 .menu-toggle {
     display: none;
     font-size: 28px;
@@ -407,7 +404,6 @@ h3 {
     color: var(--gold);
 }
 
-/* زر المنيو الخاص */
 .nav-cta-btn {
     background: var(--gold);
     color: white !important;
@@ -415,7 +411,6 @@ h3 {
     border-radius: 50px;
 }
 
-/* --- الهيرو سكشن (الخلفية والحركة) --- */
 .history-hero {
     height: 100vh;
     position: relative;
@@ -424,7 +419,6 @@ h3 {
     justify-content: center;
     text-align: center;
     overflow: hidden;
-    /* ضروري عشان الصورة لما تكبر متخرجش بره */
 }
 
 .hero-bg-wrapper {
@@ -436,7 +430,6 @@ h3 {
     z-index: -1;
 }
 
-/* تأثير حركة الزووم الهادئة للخلفية */
 .hero-zoom-img {
     width: 100%;
     height: 100%;
@@ -461,7 +454,6 @@ h3 {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.55);
-    /* تظليل لجعل النص أبيض واضح */
     z-index: 0;
 }
 
@@ -479,7 +471,6 @@ h3 {
     color: white;
 }
 
-/* --- أنيميشن النبض (Pulse Animation) --- */
 .pulse {
     animation: pulse-animation 2s infinite;
 }
@@ -500,7 +491,6 @@ h3 {
     }
 }
 
-/* تنسيق أزرار الهيرو */
 .hero-btns {
     display: flex;
     gap: 20px;
@@ -519,7 +509,6 @@ h3 {
 
 .outline-btn {
     border: 2px solid var(--gold);
-    /* تغيير الإطار للذهبي بدل الأبيض عشان يبان */
     color: var(--white) !important;
     padding: 15px 40px;
     text-decoration: none;
@@ -527,32 +516,26 @@ h3 {
     font-weight: 700;
     display: inline-block;
     transition: all 0.4s ease;
-    /* سرعة التحول */
     background: rgba(255, 255, 255, 0.05);
-    /* خلفية شفافة خفيفة جداً */
     backdrop-filter: blur(5px);
-    /* تأثير زجاجي بسيط */
 }
 
 .outline-btn:hover {
-    background-color: var(--gold); /* يتملي باللون الذهبي */
-    color: var(--dark) !important; /* الكتابة تبقى غامقة */
-    box-shadow: 0 0 20px rgba(197, 160, 89, 0.6); /* توهج ذهبي */
-    transform: translateY(-3px); /* يترفع شوية لفوق */
+    background-color: var(--gold); 
+    color: var(--dark) !important;
+    box-shadow: 0 0 20px rgba(197, 160, 89, 0.6);
+    transform: translateY(-3px);
 }
 
-/* --- ريسبونسيف (للموبايل) --- */
 @media (max-width: 768px) {
     .nav {
         display: none;
     }
 
-    /* القائمة تختفي في الموبايل وتظهر بالضغط على الأيقونة */
     .menu-toggle {
         display: block;
     }
 
-    /* تظهر الثلاث شرطات في الموبايل فقط */
     .hero-btns {
         flex-direction: column;
         align-items: center;
@@ -565,19 +548,17 @@ html {
 
 .hero-btns {
     display: flex;
-    gap: 20px; /* مسافة بين الزرارين */
+    gap: 20px; 
     justify-content: center;
     margin-top: 35px;
 }
 
-/* تأكد من إضافة كلاس الـ pulse لو عايز الزرارين ينبضوا */
 .pulse {
     animation: pulse-animation 2s infinite;
 }
 
 
 
-/* الألوان الأساسية للموقع */
 :root {
   --gold: #c5a059;
   --dark: #1a1a1a;
@@ -586,14 +567,12 @@ html {
   --shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
-/* تنسيق عام للسيكشن */
 .section-padding { padding: 80px 0; }
 .section-header { text-align: center; margin-bottom: 50px; }
 .section-header h2 { font-size: 36px; color: var(--dark); font-weight: 800; margin-top: 10px; }
 .subtitle { color: var(--gold); font-weight: bold; text-transform: uppercase; letter-spacing: 2px; }
 .header-line { width: 70px; height: 3px; background: var(--gold); margin: 15px auto; }
 
-/* شبكة الكروت */
 .tours-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -678,7 +657,6 @@ html {
 .user-info span { font-size: 13px; color: #888; }
 
 
-/* الألوان الأساسية */
 :root {
   --gold: #c5a059;
   --dark: #1a1a1a;
@@ -687,7 +665,6 @@ html {
   --shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
-/* سكشن الرحلات */
 .tours-section {
   padding: 100px 0;
   background-color: var(--white);
@@ -700,7 +677,6 @@ html {
   padding: 20px 0;
 }
 
-/* البطاقة */
 .tour-card {
   background: #fff;
   border-radius: 20px;
@@ -717,7 +693,6 @@ html {
   box-shadow: 0 20px 40px rgba(197, 160, 89, 0.15);
 }
 
-/* صندوق الصورة */
 .tour-img-box {
   height: 220px;
   position: relative;
@@ -735,7 +710,6 @@ html {
   transform: scale(1.1);
 }
 
-/* بادج السعر */
 .tour-badge {
   position: absolute;
   top: 15px;
@@ -749,7 +723,6 @@ html {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* محتوى البطاقة */
 .tour-content {
   padding: 25px;
   text-align: center;
@@ -773,7 +746,6 @@ html {
   margin-bottom: 20px;
 }
 
-/* زر الحجز */
 .btn-book {
   width: 100%;
   padding: 12px;
@@ -792,7 +764,6 @@ html {
   box-shadow: 0 5px 15px rgba(197, 160, 89, 0.3);
 }
 
-/* التجاوب مع الموبايل */
 @media (max-width: 768px) {
   .tours-grid {
     grid-template-columns: 1fr;
@@ -800,10 +771,9 @@ html {
   }
 }
 
-/* سكشن آراء العملاء */
 .testimonials-section {
   padding: 100px 0;
-  background-color: #fcfcfc; /* لون خلفية هادئ جداً */
+  background-color: #fcfcfc; 
   position: relative;
 }
 
@@ -814,12 +784,11 @@ html {
   margin-top: 40px;
 }
 
-/* بطاقة التقييم */
 .testi-card {
   background: #ffffff;
   padding: 40px;
   border-radius: 25px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.04); /* ظل خفيف جداً واحترافي */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.04);
   transition: all 0.3s ease;
   border: 1px solid #f0f0f0;
   position: relative;
@@ -827,11 +796,10 @@ html {
 
 .testi-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 50px rgba(197, 160, 89, 0.1); /* ظل يميل للذهبي عند التمرير */
+  box-shadow: 0 20px 50px rgba(197, 160, 89, 0.1); 
   border-color: var(--gold);
 }
 
-/* علامة الاقتباس */
 .quote-icon {
   font-size: 30px;
   color: var(--gold);
@@ -839,18 +807,16 @@ html {
   margin-bottom: 10px;
 }
 
-/* النجوم */
 .stars {
   margin-bottom: 20px;
 }
 
 .stars i {
-  color: #f1c40f; /* لون النجوم الذهبي */
+  color: #f1c40f; 
   font-size: 14px;
   margin-right: 2px;
 }
 
-/* نص الرأي */
 .testi-text {
   font-size: 15px;
   line-height: 1.8;
@@ -859,7 +825,6 @@ html {
   margin-bottom: 30px;
 }
 
-/* معلومات العميل (الصورة والاسم) */
 .client-info {
   display: flex;
   align-items: center;
@@ -871,7 +836,7 @@ html {
 .client-info img {
   width: 60px;
   height: 60px;
-  border-radius: 50%; /* صورة دائرية */
+  border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--gold);
 }
@@ -889,7 +854,6 @@ html {
   font-weight: 600;
 }
 
-/* التجاوب مع الموبايل */
 @media (max-width: 768px) {
   .testimonial-grid {
     grid-template-columns: 1fr;
@@ -901,14 +865,13 @@ html {
   }
 }
 
-/* سكشن الأسئلة الشائعة */
 .faq-section {
     background-color: #ffffff;
     padding: 100px 0;
 }
 
 .small-container {
-    max-width: 850px; /* جعل العرض مريحاً للقراءة */
+    max-width: 850px; 
     margin: 0 auto;
 }
 
@@ -953,7 +916,6 @@ html {
     transition: transform 0.4s ease;
 }
 
-/* حالة الفتح */
 .faq-item.active {
     border-color: var(--gold);
 }
@@ -982,14 +944,12 @@ html {
     font-size: 15px;
 }
 
-/* للموبايل */
 @media (max-width: 768px) {
     .faq-question { padding: 18px 20px; }
     .faq-question h3 { font-size: 15px; }
 }
 
 
-/* سكشن التواصل المطور */
 .contact-section {
     background-color: #fcfcfc;
     padding: 100px 0;
@@ -1005,9 +965,8 @@ html {
     border: 1px solid #f0f0f0;
 }
 
-/* الجزء الأيسر */
 .contact-info-side {
-    background-color: var(--dark); /* اللون الغامق للموقع */
+    background-color: var(--dark); 
     color: #fff;
     padding: 60px;
     display: flex;
@@ -1095,7 +1054,6 @@ html {
     border-color: var(--gold);
 }
 
-/* الجزء الأيمن (النموذج) */
 .contact-form-side {
     padding: 60px;
     background: #fff;
@@ -1152,7 +1110,6 @@ html {
     box-shadow: 0 10px 20px rgba(197, 160, 89, 0.3);
 }
 
-/* الموبايل */
 @media (max-width: 992px) {
     .contact-wrapper {
         grid-template-columns: 1fr;
@@ -1166,8 +1123,6 @@ html {
 }
 
 
-
-/* سكشن المواقع التراثية */
 .heritage-section {
     background-color: #fcfcfc;
     padding: 100px 0;
@@ -1180,7 +1135,6 @@ html {
     margin-top: 50px;
 }
 
-/* تصميم البطاقة */
 .heritage-card {
     background: #ffffff;
     border-radius: 20px;
@@ -1196,7 +1150,6 @@ html {
     border-color: var(--gold);
 }
 
-/* صندوق الصورة والحركة */
 .card-img-holder {
     height: 240px;
     position: relative;
@@ -1214,7 +1167,6 @@ html {
     transform: scale(1.1);
 }
 
-/* زر التكبير عند التمرير */
 .card-overlay-btn {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -1242,7 +1194,6 @@ html {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* محتوى البطاقة */
 .heritage-card-info {
     padding: 30px;
 }
@@ -1264,7 +1215,6 @@ html {
     overflow: visible;
 }
 
-/* رابط الاستكشاف */
 .view-link {
     text-decoration: none;
     color: var(--gold);
@@ -1289,7 +1239,6 @@ html {
     transform: translateX(5px);
 }
 
-/* ريسبونسيف */
 @media (max-width: 768px) {
     .heritage-grid {
         grid-template-columns: 1fr;
@@ -1298,9 +1247,8 @@ html {
 }
 
 
-/* --- ستايل الفوتر المطور --- */
 .main-footer {
-    background-color: #111111; /* خلفية سوداء فخمة */
+    background-color: #111111; 
     color: #ffffff;
     padding: 80px 0 0;
     font-family: 'Poppins', sans-serif;
@@ -1332,7 +1280,6 @@ html {
     background-color: var(--gold);
 }
 
-/* عمود البراند */
 .footer-logo {
     display: flex;
     align-items: center;
@@ -1360,7 +1307,6 @@ html {
     margin-bottom: 25px;
 }
 
-/* السوشيال ميديا */
 .footer-social { display: flex; gap: 15px; }
 
 .footer-social a {
@@ -1383,7 +1329,6 @@ html {
     transform: translateY(-5px);
 }
 
-/* الروابط */
 .footer-links { list-style: none; padding: 0; }
 
 .footer-links li { margin-bottom: 12px; }
@@ -1405,7 +1350,6 @@ html {
     padding-left: 8px;
 }
 
-/* معلومات التواصل */
 .footer-contact-info { list-style: none; padding: 0; }
 
 .footer-contact-info li {
@@ -1422,7 +1366,6 @@ html {
     margin-top: 5px;
 }
 
-/* النشرة الإخبارية */
 .footer-newsletter {
     display: flex;
     margin-top: 20px;
@@ -1450,7 +1393,6 @@ html {
 
 .footer-newsletter button:hover { background: var(--gold-hover); }
 
-/* الجزء السفلي */
 .footer-bottom {
     background-color: #0a0a0a;
     padding: 25px 0;
@@ -1473,7 +1415,6 @@ html {
     font-weight: 600;
 }
 
-/* ريسبونسيف */
 @media (max-width: 992px) {
     .footer-grid { grid-template-columns: 1fr 1fr; }
 }
@@ -1485,12 +1426,11 @@ html {
 
 
 @media (max-width: 768px) {
-    /* تنسيق القائمة الأساسي في الموبايل (مخفية افتراضياً) */
     .nav {
-        display: none; /* إخفاء القائمة */
+        display: none; 
         flex-direction: column;
         position: absolute;
-        top: 75px; /* المسافة تحت الهيدر */
+        top: 75px;
         left: 0;
         width: 100%;
         background-color: #ffffff;
@@ -1500,9 +1440,8 @@ html {
         text-align: center;
     }
 
-    /* الكلاس الذي سيتم إضافته بواسطة الجافاسكريبت لفتح القائمة */
     .nav.active {
-        display: flex; /* إظهار القائمة عند تفعيل كلاس active */
+        display: flex; 
     }
 
     .nav a {
@@ -1510,8 +1449,6 @@ html {
         display: block;
         font-size: 18px;
     }
-
-    /* إظهار أيقونة الثلاث شرطات */
     .menu-toggle {
         display: block !important;
     }
@@ -1519,16 +1456,15 @@ html {
 
 
 
-/* --- توسيط الفوتر على الموبايل --- */
 @media (max-width: 768px) {
     .main-footer {
-        text-align: center; /* توسيط النصوص العامة */
+        text-align: center; 
     }
 
     .footer-grid {
         display: flex;
-        flex-direction: column; /* تحويل الشبكة لعمود واحد */
-        align-items: center;    /* توسيط العناصر أفقياً */
+        flex-direction: column; 
+        align-items: center; 
         gap: 40px;
     }
 
@@ -1536,21 +1472,18 @@ html {
         width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center; /* إجبار محتوى كل عمود على التوسط */
+        align-items: center; 
     }
 
-    /* توسيط اللوجو */
     .footer-logo {
         justify-content: center;
         margin-bottom: 15px;
     }
 
-    /* توسيط أيقونات السوشيال ميديا */
     .footer-social {
         justify-content: center;
     }
 
-    /* توسيط القوائم والروابط */
     .footer-links, .footer-contact-info {
         padding: 0;
         list-style: none;
@@ -1558,13 +1491,13 @@ html {
     }
 
     .footer-links li, .footer-contact-info li {
-        justify-content: center; /* توسيط العناصر التي تستخدم flex */
+        justify-content: center; 
         text-align: center;
     }
 
     .footer-col h4::after {
         left: 50%;
-        transform: translateX(-50%); /* وضع الخط الذهبي الصغير تحت العنوان في النص تماماً */
+        transform: translateX(-50%); 
     }
 
     .footer-newsletter {
@@ -1575,7 +1508,6 @@ html {
 }
 
 
-/* --- ستايل وجهات الزوار --- */
 .destinations-section {
     background-color: #ffffff;
     padding: 100px 0;
@@ -1591,11 +1523,10 @@ html {
 .destinations-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 250px; /* ارتفاع الصفوف */
+    grid-auto-rows: 250px; 
     gap: 20px;
 }
 
-/* الكارت الكبير (خان الخليلي) */
 .dest-card.large {
     grid-column: span 2;
     grid-row: span 2;
@@ -1674,7 +1605,6 @@ html {
     opacity: 1;
 }
 
-/* ريسبونسيف للموبايل */
 @media (max-width: 992px) {
     .destinations-grid {
         grid-template-columns: 1fr 1fr;
@@ -1697,28 +1627,25 @@ html {
 }
 
 
-/* --- ضبط المسافات للموبايل --- */
 @media (max-width: 768px) {
     
-    /* 1. تقليل الحشو (Padding) الأساسي للسكاشن */
     .section-padding {
-        padding: 40px 0 !important; /* تقليلها من 80px أو 100px إلى 40px */
+        padding: 40px 0 !important; 
     }
 
-    /* 2. تقليل الفراغ تحت عناوين السكاشن */
     .section-header {
         margin-bottom: 25px !important;
     }
 
     .section-header h2 {
-        font-size: 26px !important; /* تصغير حجم الخط قليلاً ليناسب المساحة */
+        font-size: 26px !important; 
     }
 
     .header-line {
-        margin: 10px auto !important; /* تقليل المسافة حول الخط الذهبي */
+        margin: 10px auto !important;
     }
 
-    /* 3. تقليل الفراغ العلوي للعناصر داخل السكاشن لتقريبها من العنوان */
+  
     .faq-accordion, 
     .tours-grid, 
     .heritage-grid, 
@@ -1727,17 +1654,15 @@ html {
         margin-top: 15px !important;
     }
 
-    /* 4. ضبط مسافات كروت التراث (Heritage) والوجهات */
     .heritage-card-info, .dest-info {
         padding: 20px !important;
     }
 
-    /* 5. تقليل الفراغ في الفوتر */
     .main-footer {
         padding-top: 40px !important;
     }
 
     .footer-grid {
-        gap: 25px !important; /* تقليل الفراغ بين أعمدة الفوتر */
+        gap: 25px !important; 
     }
 }
