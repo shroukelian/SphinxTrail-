@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SphinxTrail Tours | Discover Ancient Egypt</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Modal -->
+    <div id="imageModal" class="modal">
+        <div class="modal-box">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <img id="modalImg">
+        </div>
+    </div>
+
+   <header class="header">
+  <div class="container nav-flex">
+    <div class="logo-area">
+      <img src="images/imgggg1-removebg-preview.png" alt="Logo" class="logo-img">
+      <h5 class="logo-text">SphinxTrail <span>Tours</span></h5>
+    </div>
+
+    <!-- تأكد أن الكلاس هنا هو nav فقط -->
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#tours">Tours</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact" class="nav-cta-btn">Book Now</a>
+    </nav>
+
+    <!-- تأكد أن الكلاس هنا هو menu-toggle -->
+    <div class="menu-toggle" id="mobile-menu-icon">&#9776;</div>
+  </div>
+</header>
+    <!-- HERO SECTION -->
+    <section id="home" class="history-hero">
+        <!-- طبقة الصورة الخلفية مع الحركة -->
+        <div class="hero-bg-wrapper">
+            <img src="https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80"
+                alt="Egypt Background" class="hero-zoom-img">
+        </div>
+
+        <!-- طبقة التظليل فوق الصورة لزيادة وضوح الكلام -->
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <h1 class="fade-in">The Great Pyramids of Giza</h1>
+            <p class="fade-in-delay">Discover one of the most magnificent wonders of the ancient world, standing tall
+                for over 4,500 years in Egypt.</p>
+            <div class="hero-btns">
+                <a href="#tours" class="main-btn pulse">Explore Tours</a>
+                <a href="#contact" class="outline-btn">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: POPULAR TOURS -->
+    <section id="tours" class="tours-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="subtitle">Experience Egypt</span>
+                <h2>Our Popular Tours</h2>
+                <div class="header-line"></div>
+            </div>
+
+            <div class="tours-grid">
+
+                <!-- Card 1: The Pyramids of Giza -->
+                <div class="tour-card" data-aos="fade-up">
+                    <div class="tour-img-box">
+                        <img src="images/image1.png" alt="Pyramids of Giza">
+                        <div class="tour-badge">$49</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>The Pyramids of Giza</h3>
+                        <p>Explore the last remaining Seven Wonders of the Ancient World, standing tall for over 4,500
+                            years.</p>
+                        <button class="btn-book"
+                            onclick="document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' })">Book
+                            Now</button>
+                    </div>
+                </div>
+
+                <!-- Card 2: Luxor Temple -->
+                <div class="tour-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="tour-img-box">
+                        <img src="images/img1.jpg" alt="Luxor Temple">
+                        <div class="tour-badge">$85</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Luxor Temple</h3>
+                        <p>Magnificent ancient temple on the east bank of the Nile, a remarkable symbol of Egypt’s rich
+                            history.</p>
+                        <button class="btn-book"
+                            onclick="document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' })">Book
+                            Now</button>
+                    </div>
+                </div>
+
+                <!-- Card 3: Karnak Temple Complex -->
+                <div class="tour-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="tour-img-box">
+                        <img src="images/img2.jpg" alt="Karnak Temple">
+                        <div class="tour-badge">$75</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Karnak Temple Complex</h3>
+                        <p>The largest religious site ever built, featuring massive temples and the famous Great
+                            Hypostyle Hall.</p>
+                        <button class="btn-book"
+                            onclick="document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' })">Book
+                            Now</button>
+                    </div>
+                </div>
+
+                <!-- Card 4: The Great Sphinx -->
+                <div class="tour-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="tour-img-box">
+                        <img src="images/img4.jpeg" alt="The Great Sphinx">
+                        <div class="tour-badge">$35</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>The Great Sphinx of Giza</h3>
+                        <p>Stand before the iconic limestone statue symbolizing strength and wisdom, guarding the
+                            plateau.</p>
+                        <button class="btn-book"
+                            onclick="document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' })">Book
+                            Now</button>
+                    </div>
+                </div>
+
+                <!-- Card 5: Grand Egyptian Museum -->
+                <div class="tour-card" data-aos="fade-up">
+                    <div class="tour-img-box">
+                        <img src="images/img5.jpg" alt="GEM Museum">
+                        <div class="tour-badge">$55</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Grand Egyptian Museum</h3>
+                        <p>The largest archaeological museum in the world, housing the complete collection of
+                            Tutankhamun.</p>
+                        <button class="btn-book"
+                            onclick="document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' })">Book
+                            Now</button>
+                    </div>
+                </div>
+
+                <!-- Card 6: Citadel of Salah El-Din -->
+                <div class="tour-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="tour-img-box">
+                        <img src="images/img6.jpg" alt="Salah El-Din Citadel">
+                        <div class="tour-badge">$40</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Citadel of Salah El-Din</h3>
+                        <p>Historic Islamic fortress providing panoramic views of Cairo and housing the famous Alabaster
+                            Mosque.</p>
+                        <button class="btn-book"
+                            onclick="document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' })">Book
+                            Now</button>
+                    </div>
+                </div>
+
+                <!-- Card 7: Qaitbay Citadel -->
+                <div class="tour-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="tour-img-box">
+                        <img src="images/img6.jpg" alt="Qaitbay Citadel">
+                        <div class="tour-badge">$45</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Qaitbay Citadel</h3>
+                        <p>A 15th-century defensive fortress in Alexandria, built on the site of the ancient Lighthouse.
+                        </p>
+                        <button class="btn-book"
+                            onclick="document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' })">Book
+                            Now</button>
+                    </div>
+                </div>
+
+                <!-- Card 8: Egyptian Museum, Cairo -->
+                <div class="tour-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="tour-img-box">
+                        <img src="images/img1.jpg" alt="Egyptian Museum">
+                        <div class="tour-badge">$35</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Egyptian Museum, Cairo</h3>
+                        <p>Located in Tahrir Square, it houses the world's most extensive collection of Pharaonic
+                            antiquities.</p>
+                        <button class="btn-book"
+                            onclick="document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' })">Book
+                            Now</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- TESTIMONIALS SECTION -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="subtitle">Reviews</span>
+                <h2>What Our Clients Say</h2>
+                <div class="header-line"></div>
+            </div>
+
+            <div class="testimonial-grid">
+
+                <!-- Card 1: Amira Hassan -->
+                <div class="testi-card" data-aos="fade-up">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testi-text">"The guide was amazing, and the pyramids were breathtaking! Highly recommend
+                        this tour for anyone visiting Egypt."</p>
+                    <div class="client-info">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Amira Hassan">
+                        <div class="client-details">
+                            <h4>Amira Hassan</h4>
+                            <span>Egypt Pyramids Tour</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Omar Khaled -->
+                <div class="testi-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testi-text">"Diving in the Red Sea was a dream! The instructors were professional and the
+                        marine life is incredible. Truly an unforgettable experience."</p>
+                    <div class="client-info">
+                        <img src="https://randomuser.me/api/portraits/men/66.jpg" alt="Omar Khaled">
+                        <div class="client-details">
+                            <h4>Omar Khaled</h4>
+                            <span>Red Sea Diving</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Salma Nabil -->
+                <div class="testi-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testi-text">"A luxurious experience on the Nile. The food, staff, and scenery were all
+                        top-notch. Can't wait to come back for another tour!"</p>
+                    <div class="client-info">
+                        <img src="https://randomuser.me/api/portraits/women/67.jpg" alt="Salma Nabil">
+                        <div class="client-details">
+                            <h4>Salma Nabil</h4>
+                            <span>Luxury Nile Cruise</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- FAQ SECTION -->
+    <section id="faq" class="faq-section section-padding">
+        <div class="container small-container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="subtitle">Information</span>
+                <h2>Frequently Asked Questions</h2>
+                <div class="header-line"></div>
+            </div>
+
+            <div class="faq-accordion">
+
+                <!-- Item 1 -->
+                <div class="faq-item" data-aos="fade-up">
+                    <div class="faq-question">
+                        <h3>What is included in the tours?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>All tours include transportation, accommodation, and guided services unless specified
+                            otherwise in the tour package details.</p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="50">
+                    <div class="faq-question">
+                        <h3>How do I book?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can book online through our website's booking form, or contact our 24/7 support team via
+                            WhatsApp for direct assistance.</p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-question">
+                        <h3>Are the tours family-friendly?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! Our tours are designed to be suitable for families with children of all ages, ensuring
+                            safety and entertainment for everyone.</p>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="150">
+                    <div class="faq-question">
+                        <h3>Do I need travel insurance?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We strongly recommend travel insurance for all international trips to cover unexpected
+                            events, although it is not mandatory for booking.</p>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faq-question">
+                        <h3>What is the cancellation policy?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can cancel up to 7 days before the tour start date for a full refund. Specific conditions
+                            may apply to luxury Nile cruises.</p>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="250">
+                    <div class="faq-question">
+                        <h3>Are meals included?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Some tours include full board or half board meals; please check the specific tour details for
+                            what is included in your chosen package.</p>
+                    </div>
+                </div>
+
+                <!-- Item 7 -->
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="faq-question">
+                        <h3>Can I customize my tour?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We offer fully customizable private tours tailored to your specific interests,
+                            budget, and time frame.</p>
+                    </div>
+                </div>
+
+                <!-- Item 8 -->
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="350">
+                    <div class="faq-question">
+                        <h3>What languages are the tours available in?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our tours are primarily available in English and Arabic. We can provide guides for Spanish,
+                            French, German, and Italian on request.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- HERITAGE SITES SECTION -->
+    <section id="heritage" class="heritage-section section-padding">
+        <div class="container">
+            <!-- عنوان السكشن -->
+            <div class="section-header" data-aos="fade-up">
+                <span class="subtitle">Discovery</span>
+                <h2>Ancient Heritage Sites</h2>
+                <div class="header-line"></div>
+            </div>
+
+            <div class="heritage-grid">
+                <!-- Site 1: Giza Pyramids -->
+                <div class="heritage-card" data-aos="fade-up">
+                    <div class="card-img-holder">
+                        <img src="images/img1.jpg" alt="Giza Pyramids">
+                        <div class="card-overlay-btn">
+                            <button onclick="openModal('images/img1.jpg')"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                    <div class="heritage-card-info">
+                        <h3>Giza Pyramids</h3>
+                        <p>One of the ancient wonders of the world and a UNESCO World Heritage site, standing for over
+                            4,500 years.</p>
+                        <a href="#" class="view-link" onclick="openModal('images/img1.jpg'); return false;">Explore
+                            Gallery</a>
+                    </div>
+                </div>
+
+                <!-- Site 2: Karnak Temple -->
+                <div class="heritage-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-img-holder">
+                        <img src="images/img2.jpg" alt="Karnak Temple">
+                        <div class="card-overlay-btn">
+                            <button onclick="openModal('images/img2.jpg')"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                    <div class="heritage-card-info">
+                        <h3>Karnak Temple</h3>
+                        <p>Karnak Temple complex is one of the largest and most impressive religious complexes in
+                            ancient Egypt.</p>
+                        <a href="#" class="view-link" onclick="openModal('images/img2.jpg'); return false;">Explore
+                            Gallery</a>
+                    </div>
+                </div>
+
+                <!-- Site 3: Abu Simbel -->
+                <div class="heritage-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-img-holder">
+                        <img src="images/img4.jpeg" alt="Abu Simbel">
+                        <div class="card-overlay-btn">
+                            <button onclick="openModal('images/img4.jpeg')"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                    <div class="heritage-card-info">
+                        <h3>Abu Simbel</h3>
+                        <p>The Abu Simbel temples are iconic rock-cut monuments famous for the giant statues of Ramses
+                            II.</p>
+                        <a href="#" class="view-link" onclick="openModal('images/img4.jpeg'); return false;">Explore
+                            Gallery</a>
+                    </div>
+                </div>
+
+                <!-- Site 4: Luxor Temple -->
+                <div class="heritage-card" data-aos="fade-up">
+                    <div class="card-img-holder">
+                        <img src="images/img5.jpg" alt="Luxor Temple">
+                        <div class="card-overlay-btn">
+                            <button onclick="openModal('images/img5.jpg')"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                    <div class="heritage-card-info">
+                        <h3>Luxor Temple</h3>
+                        <p>A magnificent historic landmark on the east bank of the Nile, built during the New Kingdom.
+                        </p>
+                        <a href="#" class="view-link" onclick="openModal('images/img5.jpg'); return false;">Explore
+                            Gallery</a>
+                    </div>
+                </div>
+
+                <!-- Site 5: Hatshepsut Temple -->
+                <div class="heritage-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-img-holder">
+                        <img src="images/img6.jpg" alt="Hatshepsut Temple">
+                        <div class="card-overlay-btn">
+                            <button onclick="openModal('images/img6.jpg')"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                    <div class="heritage-card-info">
+                        <h3>Hatshepsut Temple</h3>
+                        <p>A masterpiece of ancient architecture carved directly into the cliffs in memory of the Queen.
+                        </p>
+                        <a href="#" class="view-link" onclick="openModal('images/img6.jpg'); return false;">Explore
+                            Gallery</a>
+                    </div>
+                </div>
+
+                <!-- Site 6: Philae Temple -->
+                <div class="heritage-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-img-holder">
+                        <img src="images/img7.jpg" alt="Philae Temple">
+                        <div class="card-overlay-btn">
+                            <button onclick="openModal('images/img7.jpg')"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                    <div class="heritage-card-info">
+                        <h3>Philae Temple</h3>
+                        <p>The stunning Temple of Isis on Philae Island is a significant Greco-Roman tourist attraction.
+                        </p>
+                        <a href="#" class="view-link" onclick="openModal('images/img7.jpg'); return false;">Explore
+                            Gallery</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section section-padding">
+        <div class="container">
+            <div class="contact-wrapper" data-aos="fade-up">
+
+                <!-- الجزء الأيسر: معلومات التواصل -->
+                <div class="contact-info-side">
+                    <span class="info-subtitle">Get in Touch</span>
+                    <h2>Ready for <span class="gold-text">Adventure?</span></h2>
+                    <p>Contact us today and let our experts plan your dream trip to the heart of ancient Egypt.</p>
+
+                    <div class="contact-methods">
+                        <div class="method-item">
+                            <div class="icon-box"><i class="fas fa-envelope"></i></div>
+                            <div class="method-details">
+                                <h4>Email Us</h4>
+                                <p>info@sphinxtrail.com</p>
+                            </div>
+                        </div>
+                        <div class="method-item">
+                            <div class="icon-box"><i class="fas fa-phone-alt"></i></div>
+                            <div class="method-details">
+                                <h4>Call Us</h4>
+                                <p>+20 123 456 7890</p>
+                            </div>
+                        </div>
+                        <div class="method-item">
+                            <div class="icon-box"><i class="fas fa-location-dot"></i></div>
+                            <div class="method-details">
+                                <h4>Visit Us</h4>
+                                <p>Giza Plateau, Cairo, Egypt</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-side">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <!-- الجزء الأيمن: نموذج التواصل -->
+                <div class="contact-form-side">
+                    <form id="contactForm" class="modern-form">
+                        <div class="form-row">
+                            <div class="input-group">
+                                <input type="text" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="input-group">
+                                <input type="email" name="email" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <input type="tel" name="phone" placeholder="Phone Number" required>
+                        </div>
+                        <div class="input-group">
+                            <textarea name="message" placeholder="Tell us about your dream trip..." rows="5"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn pulse">
+                            Send Message <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- MAIN FOOTER -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+
+            <!-- العمود 1: عن الشركة -->
+            <div class="footer-col brand-col">
+                <div class="footer-logo">
+                    <img src="./imgggg1.jpeg" alt="SphinxTrail">
+                    <h3>SphinxTrail<span>Tours</span></h3>
+                </div>
+                <p>Your premium gateway to the wonders of Ancient Egypt. We provide personalized luxury tours with
+                    expert guides to make your journey unforgettable.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <!-- العمود 2: روابط سريعة -->
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="#tours"><i class="fas fa-chevron-right"></i> Our Tours</a></li>
+                    <li><a href="#heritage"><i class="fas fa-chevron-right"></i> Heritage Sites</a></li>
+                    <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Reviews</a></li>
+                    <li><a href="#faq"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- العمود 3: تواصل معنا -->
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <ul class="footer-contact-info">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Giza Plateau, Cairo, Egypt</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+20 123 456 7890</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>info@sphinxtrail.com</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- العمود 4: النشرة الإخبارية -->
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p>Subscribe to get the latest tour offers and historical news.</p>
+                <form class="footer-newsletter">
+                    <input type="email" placeholder="Your Email" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- الشريط السفلي للحقوق -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="bottom-flex">
+                    <p>&copy; 2026 <span>SphinxTrail Tours</span>. All Rights Reserved.</p>
+                    <p>Designed by <a href="https://www.facebook.com/profile.php?id=100090592885243&mibextid=ZbWKwL"
+                            target="_blank" class="designer-link">GMT WEB</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Floating Buttons -->
+    <div class="contact-buttons">
+        <a href="https://wa.me/+201125390934" target="_blank" class="whatsapp-btn pulse">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+201125390934" class="phone-btn">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
