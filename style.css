@@ -1562,16 +1562,182 @@ html {
         text-align: center;
     }
 
-    /* تظبيط الهيدنج (العناوين) لتبدو في المنتصف */
     .footer-col h4::after {
         left: 50%;
         transform: translateX(-50%); /* وضع الخط الذهبي الصغير تحت العنوان في النص تماماً */
     }
 
-    /* توسيط نموذج النشرة الإخبارية */
     .footer-newsletter {
         width: 100%;
         max-width: 300px;
         margin: 0 auto;
+    }
+}
+
+
+/* --- ستايل وجهات الزوار --- */
+.destinations-section {
+    background-color: #ffffff;
+    padding: 100px 0;
+}
+
+.section-desc {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    color: #777;
+    font-size: 15px;
+}
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 250px; /* ارتفاع الصفوف */
+    gap: 20px;
+}
+
+/* الكارت الكبير (خان الخليلي) */
+.dest-card.large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.dest-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.dest-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.dest-card:hover img {
+    transform: scale(1.1);
+}
+
+.dest-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 60%);
+    display: flex;
+    align-items: flex-end;
+    padding: 30px;
+    transition: 0.3s;
+}
+
+.dest-info {
+    color: #fff;
+    transform: translateY(20px);
+    transition: 0.4s ease;
+}
+
+.dest-card:hover .dest-info {
+    transform: translateY(0);
+}
+
+.loc-tag {
+    background: var(--gold);
+    color: #111;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.dest-info h3 {
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 8px;
+    font-family: 'Playfair Display', serif;
+}
+
+.dest-info p {
+    font-size: 13px;
+    color: #ccc;
+    line-height: 1.5;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.dest-card:hover .dest-info p {
+    opacity: 1;
+}
+
+/* ريسبونسيف للموبايل */
+@media (max-width: 992px) {
+    .destinations-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .destinations-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 300px;
+    }
+    .dest-card.large {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    .dest-info p {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* --- ضبط المسافات للموبايل --- */
+@media (max-width: 768px) {
+    
+    /* 1. تقليل الحشو (Padding) الأساسي للسكاشن */
+    .section-padding {
+        padding: 40px 0 !important; /* تقليلها من 80px أو 100px إلى 40px */
+    }
+
+    /* 2. تقليل الفراغ تحت عناوين السكاشن */
+    .section-header {
+        margin-bottom: 25px !important;
+    }
+
+    .section-header h2 {
+        font-size: 26px !important; /* تصغير حجم الخط قليلاً ليناسب المساحة */
+    }
+
+    .header-line {
+        margin: 10px auto !important; /* تقليل المسافة حول الخط الذهبي */
+    }
+
+    /* 3. تقليل الفراغ العلوي للعناصر داخل السكاشن لتقريبها من العنوان */
+    .faq-accordion, 
+    .tours-grid, 
+    .heritage-grid, 
+    .destinations-grid, 
+    .testimonial-grid {
+        margin-top: 15px !important;
+    }
+
+    /* 4. ضبط مسافات كروت التراث (Heritage) والوجهات */
+    .heritage-card-info, .dest-info {
+        padding: 20px !important;
+    }
+
+    /* 5. تقليل الفراغ في الفوتر */
+    .main-footer {
+        padding-top: 40px !important;
+    }
+
+    .footer-grid {
+        gap: 25px !important; /* تقليل الفراغ بين أعمدة الفوتر */
     }
 }
